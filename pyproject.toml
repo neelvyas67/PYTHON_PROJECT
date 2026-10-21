@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "expense-tracker"
+version = "1.0.0"
+description = "A small SQLite-backed expense tracker for the terminal"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+expense-tracker = "expense_tracker.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["expense_tracker*"]
